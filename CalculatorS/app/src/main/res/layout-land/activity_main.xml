@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/edidText"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginBottom="1pt"
+        android:layout_weight="0.120"
+        android:ems="10"
+        android:gravity="right|center"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toTopOf="@+id/displayEditText" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buSinus"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/blue"
+                android:onClick="operatorEvent"
+                android:text="sin"
+                android:textColor="@color/tanAccent"
+                android:textSize="14pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buCosinus"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/button_background"
+                android:onClick="operatorEvent"
+                android:text="cos"
+                android:textColor="@color/tanAccent"
+                android:textSize="14pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buTanjant"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/button_background"
+                android:onClick="operatorEvent"
+                android:text="tan"
+                android:textColor="@color/tanAccent"
+                android:textSize="14pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buFaktoriyel"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/button_background"
+                android:onClick="operatorEvent"
+                android:text="!"
+                android:textColor="@color/tanAccent"
+                android:textSize="14pt"></androidx.appcompat.widget.AppCompatButton>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buAC"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="acEvent"
+                android:text="AC"
+                android:backgroundTint="@color/redBackground"
+                android:textColor="@color/tanAccent"
+                android:textSize="14pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buPlusMinus"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="+/-"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buDivide"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="operatorEvent"
+                android:text="/"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buMultiply"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="operatorEvent"
+                android:text="*"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu7"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="7"
+
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu8"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="8"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu9"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="9"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buPercent"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/green"
+                android:onClick="percentEvent"
+                android:text="%"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu4"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="4"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu5"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="5"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu6"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="6"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buPlus"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="operatorEvent"
+                android:text="+"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu1"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="1"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu2"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="2"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu3"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="3"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buMinus"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/green"
+                android:onClick="numberEvent"
+                android:text="-"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/bu0"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="0"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buDot"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="numberEvent"
+                android:text="."
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/buEquals"
+                android:layout_width="0pt"
+                android:layout_height="15pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:onClick="equalEvent"
+                android:text="="
+                android:backgroundTint="@color/greyEnd"
+                android:textColor="@color/tanAccent"
+                android:textSize="12pt"></androidx.appcompat.widget.AppCompatButton>
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
